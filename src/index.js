@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import ParkingComponent from './components/parking.jsx';
+import ParkingComponent from './components/parking.js';
 import * as serviceWorker from './serviceWorker';
-import BusComponent from './components/bus.jsx';
+import BusComponent from './components/bus.js';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 ReactDOM.render(<ParkingComponent />, document.getElementById('root'));

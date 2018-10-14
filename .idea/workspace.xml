@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b4575f4-97da-44cf-ae65-b1635b02fa74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Setra-side-view-wh-21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/bus.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/parking.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Setra-side-view-wh-21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/bus.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bus.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/parking.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/parking.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -28,10 +23,10 @@
         <state>
           <leaf>
             <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/components/bus.jsx">
+              <entry file="file://$PROJECT_DIR$/src/components/bus.js">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="235">
-                    <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="32" selection-end-column="28" />
+                    <caret line="30" column="16" selection-start-line="30" selection-start-column="19" selection-end-line="32" selection-end-column="28" />
                     <folding>
                       <element signature="e#0#26#0" expanded="true" />
                     </folding>
@@ -104,15 +99,17 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="40" />
-          <entry key="js" value="646" />
-          <entry key="jsx" value="1151" />
+          <entry key="js" value="648" />
+          <entry key="jsx" value="2700" />
+          <entry key="txt" value="220" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="40" />
-          <entry key="JSX Harmony" value="1151" />
-          <entry key="JavaScript" value="646" />
+          <entry key="JSX Harmony" value="2700" />
+          <entry key="JavaScript" value="648" />
+          <entry key="PLAIN_TEXT" value="220" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -120,7 +117,11 @@
           <entry key="TypeScriptServerServiceImpl" value="1" />
         </counts>
       </usages-collector>
-      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.create.new" value="1" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
@@ -164,10 +165,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/parking.jsx">
+        <entry file="file://$PROJECT_DIR$/src/components/parking.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="64" column="30" lean-forward="true" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+            <state relative-caret-position="374">
+              <caret line="176" column="25" selection-start-line="176" selection-start-column="25" selection-end-line="176" selection-end-column="25" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="e#577#621#0" expanded="true" />
@@ -177,7 +178,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/bus.jsx">
+        <entry file="file://$PROJECT_DIR$/src/components/bus.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="235">
               <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="32" selection-end-column="31" />
@@ -207,21 +208,27 @@
       <find>classes</find>
       <find>propTypes</find>
       <find>position</find>
+      <find>this.setState</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/components/bus.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/components/parking.js" />
         <option value="$PROJECT_DIR$/src/components/bus.jsx" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/parking.jsx" />
+        <option value="$PROJECT_DIR$/src/components/parking.js" />
       </list>
     </option>
   </component>
@@ -283,11 +290,6 @@
             <path>
               <item name="accordo-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="accordo-test" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="accordo-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="accordo-test" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -317,6 +319,11 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Matthew\Desktop\Accordo\accordo-test\src\assets" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -339,24 +346,39 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539470178549</updated>
-      <workItem from="1539470180419" duration="16707000" />
+      <workItem from="1539470180419" duration="26687000" />
     </task>
+    <task id="LOCAL-00001" summary="Created the react project using react cli&#10;Created the parking component and bus component&#10;Created the parking in template using grid tiles&#10;added the busPosition object">
+      <created>1539494428974</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1539494428974</updated>
+    </task>
+    <task id="LOCAL-00002" summary="The coordinates x and y is working">
+      <created>1539499636293</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1539499636293</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16707000" />
+    <option name="totallyTimeSpent" value="26687000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="962" y="-1096" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19915701" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19915701" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32925472" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32925472" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -376,6 +398,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created the react project using react cli&#10;Created the parking component and bus component&#10;Created the parking in template using grid tiles&#10;added the busPosition object" />
+    <MESSAGE value="The coordinates x and y is working" />
+    <option name="LAST_COMMIT_MESSAGE" value="The coordinates x and y is working" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/App.test.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -386,7 +413,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/Setra-side-view-wh-21.jpg">
+    <entry file="file://$PROJECT_DIR$/src/assets/bus.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@material-ui/core/styles/withStyles.d.ts">
@@ -406,7 +433,7 @@
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/bus.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/bus.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
           <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="32" selection-end-column="31" />
@@ -443,10 +470,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/parking.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/parking.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="64" column="30" lean-forward="true" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+        <state relative-caret-position="374">
+          <caret line="176" column="25" selection-start-line="176" selection-start-column="25" selection-end-line="176" selection-end-column="25" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="e#577#621#0" expanded="true" />
