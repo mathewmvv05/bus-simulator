@@ -34,49 +34,70 @@ const styles = theme => ({
 	},
 	input: {
 		display: 'none',
-	},
+	}
 });
 
 class ParkingComponent extends React.Component {
 	state = {
 		spacing: '16',
-		busPosition: {x: 0, y: 0, direction: ''}
+		busPosition: {x: 0, y: 0},
+		newBus: <p>Car</p>
 	};
 
 	positionChangeReset = () => {
 		this.setState({
-			busPosition: {x: 0, y: 0, direction: 'right'}
+			busPosition: {x: 0, y: 0}
 		});
 		console.log(this.state.busPosition);
 	};
 
 	positionChangeRight = () => {
-		this.setState({
-			busPosition: {x: this.state.busPosition.x, y: this.state.busPosition.y, direction: 'right'}
-		});
+		if(this.state.busPosition.x === 4) {
+			return this.state.busPosition;
+		}
+		else {
+			this.setState({
+				busPosition: {x: this.state.busPosition.x+1, y: this.state.busPosition.y}
+			});
+		}
 		console.log(this.state.busPosition);
 	};
 	positionChangeLeft = () => {
-		this.setState({
-			busPosition: {x: this.state.busPosition.x, y: this.state.busPosition.y, direction: 'left'}
-		});
+		if(this.state.busPosition.x === 0) {
+			return this.state.busPosition;
+		}
+		else {
+			this.setState({
+				busPosition: {x: this.state.busPosition.x - 1, y: this.state.busPosition.y}
+			});
+		}
 		console.log(this.state.busPosition);
 	};
 	positionChangeUp = () => {
-		this.setState({
-			busPosition: {x: this.state.busPosition.x, y: this.state.busPosition.y+1, direction: this.state.busPosition.direction}
-		});
+		if( this.state.busPosition.y === 4) {
+			return this.state.busPosition;
+		}
+		else {
+			this.setState({
+				busPosition: {x: this.state.busPosition.x, y: this.state.busPosition.y+1}
+			});
+		}
+		console.log(this.state.busPosition);
+	};
+	positionChangeDown = () => {
+		if( this.state.busPosition.y === 0) {
+			return this.state.busPosition;
+		}
+		else {
+			this.setState({
+				busPosition: {x: this.state.busPosition.x, y: this.state.busPosition.y - 1}
+			});
+		}
 		console.log(this.state.busPosition);
 	};
 	positionReport() {
 		console.log(this.state.busPosition);
 	}
-
-	handleChange = key => (event, value) => {
-		this.setState({
-			[key]: value,
-		});
-	};
 
 	render() {
 		const { classes } = this.props;
@@ -94,46 +115,46 @@ class ParkingComponent extends React.Component {
 				<Grid container className={classes.root}  spacing={0}>
 					<Grid item xs={5}>
 						<Grid container className={classes.demo} spacing={Number(spacing)}>
-							{[0, 1, 2, 4, 5].map(value => (
+							{[0, 1, 2, 3, 4].map(value => (
 								<Grid key={value} item>
 									<Paper className={classes.paper}>
-										<p>Bus</p>
+										<p>{this.parkingRow0()}</p>
 									</Paper>
 								</Grid>
 							))}
 						</Grid>
 						<Grid container className={classes.demo} spacing={Number(spacing)}>
-							{[0, 1, 2, 4, 5].map(value => (
+							{[0, 1, 2, 3, 4].map(value => (
 								<Grid key={value} item>
 									<Paper className={classes.paper}>
-										<p>Bus</p>
+										<p>{this.parkingRow1()}</p>
 									</Paper>
 								</Grid>
 							))}
 						</Grid>
 						<Grid container className={classes.demo} spacing={Number(spacing)}>
-							{[0, 1, 2, 4, 5].map(value => (
+							{[0, 1, 2, 3, 4].map(value => (
 								<Grid key={value} item>
 									<Paper className={classes.paper}>
-										<p>Bus</p>
+										<p>{this.parkingRow2()}</p>
 									</Paper>
 								</Grid>
 							))}
 						</Grid>
 						<Grid container className={classes.demo} spacing={Number(spacing)}>
-							{[0, 1, 2, 4, 5].map(value => (
+							{[0, 1, 2, 3, 4].map(value => (
 								<Grid key={value} item>
 									<Paper className={classes.paper}>
-										<p>Bus</p>
+										<p>{this.parkingRow3()}</p>
 									</Paper>
 								</Grid>
 							))}
 						</Grid>
 						<Grid container className={classes.demo} spacing={Number(spacing)}>
-							{[0, 1, 2, 4, 5].map(value => (
+							{[0, 1, 2, 3, 4].map(value => (
 								<Grid key={value} item>
 									<Paper className={classes.paper}>
-										<p>Bus</p>
+										<p>{this.parkingRow4()}</p>
 									</Paper>
 								</Grid>
 							))}
@@ -152,11 +173,72 @@ class ParkingComponent extends React.Component {
 				<Button onClick={this.positionChangeUp} variant="outlined" color="primary" className={classes.button}>
 					Move Up
 				</Button>
-				<Button onClick={this.positionChange} variant="outlined" color="primary" className={classes.button}>
-					Report
+				<Button onClick={this.positionChangeDown} variant="outlined" color="primary" className={classes.button}>
+					Move Down
+				</Button>
+				<Button onClick={this.formatCount} variant="outlined" color="primary" className={classes.button}>
+					Format
 				</Button>
 			</div>
 		);
+	}
+	parkingRow0() {
+		const { newBus, busPosition } = this.state;
+		if( busPosition.x === 0 ) {
+			return <span>New Bus</span>;
+		} else {
+			return <span></span>
+		}
+
+	}
+	parkingRow1() {
+		const { newBus, busPosition } = this.state;
+		if( busPosition.x === 1 ) {
+			return <span>New Bus</span>;
+		} else {
+			return <span></span>
+		}
+
+	}
+	parkingRow2() {
+		const { busPosition } = this.state;
+		if( busPosition.x === 2 ) {
+			return <span>New Bus</span>;
+		} else {
+			return <span></span>
+		}
+	}
+	parkingRow3() {
+		const { busPosition } = this.state;
+		if( busPosition.x === 3 ) {
+			return <span>New Bus</span>;
+		} else {
+			return <span></span>
+		}
+	}
+	parkingRow4() {
+		const { busPosition } = this.state;
+		if( busPosition.x === 4 ) {
+			return <span>New Bus</span>;
+		} else {
+			return <span></span>
+		}
+	}
+	parkingRestX() {
+		const { busPosition } = this.state;
+		if ( busPosition.x > 4 || busPosition.x < 0 ) {
+			this.setState({
+				busPosition: {x: 0, y: this.state.busPosition.y}
+			});
+		}
+	}
+	parkingRestY() {
+		const { busPosition } = this.state;
+		if ( busPosition.y > 4  || busPosition.y < 0) {
+			this.setState({
+				busPosition: {x: this.state.busPosition.x, y: 0}
+			});
+		}
 	}
 }
 
