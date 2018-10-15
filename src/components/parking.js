@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -7,17 +6,13 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid';
 import bus from '../assets/bus.jpg';
-// import FormLabel from '@material-ui/core/FormLabel';
-// import FormControlLabel from '@material-ui/core/FormControlLabel';
-// import RadioGroup from '@material-ui/core/RadioGroup';
-// import Radio from '@material-ui/core/Radio';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
-import BusComponent from './bus.js';
 
 var imgStyle = {
 	width: "100px"
 };
+
 const styles = theme => ({
 	root: {
 		flexGrow: 1,
@@ -44,15 +39,13 @@ const styles = theme => ({
 class ParkingComponent extends React.Component {
 	state = {
 		spacing: '16',
-		busPosition: {x: 0, y: 0},
-		newBus: <p>Car</p>
+		busPosition: {x: 0, y: 0}
 	};
 
 	positionChangeReset = () => {
 		this.setState({
 			busPosition: {x: 0, y: 0}
 		});
-		console.log(this.state.busPosition);
 	};
 
 	positionChangeRight = () => {
@@ -64,7 +57,6 @@ class ParkingComponent extends React.Component {
 				busPosition: {x: this.state.busPosition.x+1, y: this.state.busPosition.y}
 			});
 		}
-		console.log(this.state.busPosition);
 	};
 	positionChangeLeft = () => {
 		if(this.state.busPosition.x === 0) {
@@ -75,7 +67,6 @@ class ParkingComponent extends React.Component {
 				busPosition: {x: this.state.busPosition.x - 1, y: this.state.busPosition.y}
 			});
 		}
-		console.log(this.state.busPosition);
 	};
 	positionChangeUp = () => {
 		if( this.state.busPosition.y === 4) {
@@ -86,7 +77,6 @@ class ParkingComponent extends React.Component {
 				busPosition: {x: this.state.busPosition.x, y: this.state.busPosition.y + 1}
 			});
 		}
-		console.log(this.state.busPosition);
 	};
 	positionChangeDown = () => {
 		if( this.state.busPosition.y === 0) {
@@ -97,10 +87,9 @@ class ParkingComponent extends React.Component {
 				busPosition: {x: this.state.busPosition.x, y: this.state.busPosition.y - 1}
 			});
 		}
-		console.log(this.state.busPosition);
 	};
 	positionReport = () => {
-		window.alert(JSON.stringify('X = ' + this.state.busPosition.x + " ," + "Y = " + this.state.busPosition.y));
+		window.alert(JSON.stringify(`X - Position = ${this.state.busPosition.x}, Y - Position =  ${this.state.busPosition.y}`));
 	};
 
 	render() {
@@ -117,13 +106,13 @@ class ParkingComponent extends React.Component {
 					</Toolbar>
 				</AppBar>
 
-				<Grid container className={classes.root}  spacing={0}>
+				<Grid container className={classes.root}  spacing={8}>
 					<Grid item xs={5}>
 						<Grid container className={classes.demo} spacing={Number(spacing)}>
 							{[0, 1, 2, 3, 4].map(value => (
 								<Grid key={value} item>
 									<Paper className={classes.paper}>
-										{(value === this.state.busPosition.x) ? <p>{this.parkingRow0()}</p>: <p></p>}
+										{(value === this.state.busPosition.x) ? <span>{this.parkingRow0()}</span>: <span></span>}
 									</Paper>
 								</Grid>
 							))}
@@ -132,7 +121,7 @@ class ParkingComponent extends React.Component {
 							{[0, 1, 2, 3, 4].map(value => (
 								<Grid key={value} item>
 									<Paper className={classes.paper}>
-										{value === this.state.busPosition.x ? <p>{this.parkingRow1()}</p>: <p></p>}
+										{value === this.state.busPosition.x ? <span>{this.parkingRow1()}</span>: <span></span>}
 									</Paper>
 								</Grid>
 							))}
@@ -141,7 +130,7 @@ class ParkingComponent extends React.Component {
 							{[0, 1, 2, 3, 4].map(value => (
 								<Grid key={value} item>
 									<Paper className={classes.paper}>
-										{value === this.state.busPosition.x ? <p>{this.parkingRow2()}</p>: <p></p>}
+										{value === this.state.busPosition.x ? <span>{this.parkingRow2()}</span>: <span></span>}
 									</Paper>
 								</Grid>
 							))}
@@ -150,7 +139,7 @@ class ParkingComponent extends React.Component {
 							{[0, 1, 2, 3, 4].map(value => (
 								<Grid key={value} item>
 									<Paper className={classes.paper}>
-										{value === this.state.busPosition.x ? <p>{this.parkingRow3()}</p>: <p></p>}
+										{value === this.state.busPosition.x ? <span>{this.parkingRow3()}</span>: <span></span>}
 									</Paper>
 								</Grid>
 							))}
@@ -188,20 +177,17 @@ class ParkingComponent extends React.Component {
 		);
 	}
 	parkingRow0() {
-		const { newBus, busPosition } = this.state;
+		const { busPosition } = this.state;
 		if( busPosition.y === 0 ) {
-			console.log('This is one');
-			return <span><img style={imgStyle} src={bus} alt="" /></span>;
+			return <span><img style={imgStyle} src={bus} alt={''}/></span>;
 		} else {
 			return <span></span>
 		}
-
 	}
 	parkingRow1() {
-		const { newBus, busPosition } = this.state;
+		const { busPosition } = this.state;
 		if( busPosition.y === 1 ) {
-			console.log('This is two');
-			return <span><img style={imgStyle} src={bus} alt="" /></span>;
+			return <span><img style={imgStyle} src={bus} alt={''}/></span>;
 		} else {
 			return <span></span>
 		}
@@ -210,8 +196,7 @@ class ParkingComponent extends React.Component {
 	parkingRow2() {
 		const { busPosition } = this.state;
 		if( busPosition.y === 2 ) {
-			console.log('This is three');
-			return <span><img style={imgStyle} src={bus} alt="" /></span>;
+			return <span><img style={imgStyle} src={bus} alt={''}/></span>;
 		} else {
 			return <span></span>
 		}
@@ -219,8 +204,7 @@ class ParkingComponent extends React.Component {
 	parkingRow3() {
 		const { busPosition } = this.state;
 		if( busPosition.y === 3 ) {
-			console.log('This is Four');
-			return <span><img style={imgStyle} src={bus} alt="" /></span>;
+			return <span><img style={imgStyle} src={bus} alt={''}/></span>;
 		} else {
 			return <span></span>
 		}
@@ -228,8 +212,7 @@ class ParkingComponent extends React.Component {
 	parkingRow4() {
 		const { busPosition } = this.state;
 		if( busPosition.y === 4 ) {
-			console.log('This is five');
-			return <span><img style={imgStyle} src={bus}/></span>;
+			return <span><img style={imgStyle} src={bus} alt={''}/></span>;
 		} else {
 			return <span></span>
 		}
