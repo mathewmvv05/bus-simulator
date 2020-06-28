@@ -1,0 +1,54 @@
+using Moq;
+using PlexureTest.Services;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using Xunit;
+
+namespace PlexureTestUnitTest.Services
+{
+    public class AggregateLengthServiceTests
+    {
+        public AggregateLengthServiceTests()
+        {
+            
+        }
+
+        [Fact]
+        public void GetAggregateLengthAsync_Returns_()
+        {
+            
+        }
+
+        [Fact]
+        public void MakeHttpRequestAsync_Makes_HttpRequest_And_Returns_Totoal_Length_Of_Response_Content()
+        {
+            // Arrange
+
+            // Act
+            var aggregateLengthService = new AggregateLengthService();
+
+            // Assert
+        }
+
+
+        [Fact]
+        public void GenerateUrls_Generate_Urls()
+        {
+            // Arrange
+            var expected = new List<string>()
+            {
+                "https://jsonplaceholder.typicode.com/posts",
+                "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "https://jsonplaceholder.typicode.com/posts?userId=1"
+            };
+
+            // Act
+            var aggregateLengthService = new AggregateLengthService();
+            var actual = aggregateLengthService.GenerateUrls();
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+    }
+}
